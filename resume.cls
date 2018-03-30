@@ -109,11 +109,6 @@
     }{}
   }{}
 
-  \ifthenelse{\equal{\@orcid}{}}{\ClassError{resume}{
-      \protect\orcid\space required
-    }{}
-  }{}
-
   \ifthenelse{\equal{\@phone}{}}{\ClassError{resume}{
       \protect\phone\space required
     }{}
@@ -121,7 +116,12 @@
 
   \begin{small}
     \noindent{\sc \@streetaddress\hspace{1em}\@citystatezip} \\
-    \noindent{\textbf{EMAIL} \@email\hspace{2em}\textbf{WEB} \@webpage\hspace{2em}\textbf{ORCID} \@orcid\hspace{2em} \textbf{TEL} \@phone}
+    \noindent{
+      \textbf{email} \@email\hspace{1em}
+      \textbf{web} \@webpage\hspace{1em}
+      \textbf{tel} \@phone\hspace{1em}
+      \ifthenelse{\equal{\@orcid}{}}{}{\noindent{\textbf{orcid} \@orcid}}
+    }
   \end{small}
 
   \goodbreak\vspace{1.0em}
