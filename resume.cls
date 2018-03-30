@@ -5,7 +5,7 @@
 % You may use, modify, and redistribute this file in any way you please, so
 % long as this copyright notice is maintained.
 
-% Modifed 2010 Michael Galloy
+% Modified 2010 Michael Galloy
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{resume}
@@ -69,6 +69,7 @@
 \newcommand{\@citystatezip}{}
 \newcommand{\@phone}{}
 \newcommand{\@webpage}{}
+\newcommand{\@orcid}{}
 
 \renewcommand{\author}[1]{\renewcommand{\@authorname}{#1}}
 %\newcommand{\email}[1]{\urldef{\@email}{\url}{#1}}
@@ -78,6 +79,7 @@
 \newcommand{\phone}[1]{\renewcommand{\@phone}{#1}}
 %\newcommand{\webpage}[1]{\urldef{\@webpage}{\url}{#1}}
 \newcommand{\webpage}[1]{\renewcommand{\@webpage}{#1}}
+\newcommand{\orcid}[1]{\renewcommand{\@orcid}{#1}}
 
 
 \renewcommand{\maketitle}{{%
@@ -107,6 +109,11 @@
     }{}
   }{}
 
+  \ifthenelse{\equal{\@orcid}{}}{\ClassError{resume}{
+      \protect\orcid\space required
+    }{}
+  }{}
+
   \ifthenelse{\equal{\@phone}{}}{\ClassError{resume}{
       \protect\phone\space required
     }{}
@@ -114,9 +121,9 @@
 
   \begin{small}
     \noindent{\sc \@streetaddress\hspace{1em}\@citystatezip} \\
-    \noindent{\textbf{EMAIL} \@email\hspace{2em}\textbf{WEB} \@webpage\hspace{2em} \textbf{TEL} \@phone}
+    \noindent{\textbf{EMAIL} \@email\hspace{2em}\textbf{WEB} \@webpage\hspace{2em}\textbf{ORCID} \@orcid\hspace{2em} \textbf{TEL} \@phone}
   \end{small}
-  
+
   \goodbreak\vspace{1.0em}
 }}
 
