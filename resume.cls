@@ -70,6 +70,7 @@
 \newcommand{\@phone}{}
 \newcommand{\@webpage}{}
 \newcommand{\@orcid}{}
+\newcommand{\@github}{}
 
 \renewcommand{\author}[1]{\renewcommand{\@authorname}{#1}}
 %\newcommand{\email}[1]{\urldef{\@email}{\url}{#1}}
@@ -80,6 +81,7 @@
 %\newcommand{\webpage}[1]{\urldef{\@webpage}{\url}{#1}}
 \newcommand{\webpage}[1]{\renewcommand{\@webpage}{#1}}
 \newcommand{\orcid}[1]{\renewcommand{\@orcid}{#1}}
+\newcommand{\github}[1]{\renewcommand{\@github}{#1}}
 
 
 \renewcommand{\maketitle}{{%
@@ -119,8 +121,9 @@
     \noindent{
       \textbf{email} \@email\hspace{1em}
       \textbf{web} \@webpage\hspace{1em}
-      \textbf{tel} \@phone\hspace{1em}
+      \textbf{tel} \@phone\hspace{1em} \\
       \ifthenelse{\equal{\@orcid}{}}{}{\noindent{\textbf{orcid} \@orcid}}
+      \ifthenelse{\equal{\@github}{}}{}{\noindent{\textbf{github} \@github}}
     }
   \end{small}
 
