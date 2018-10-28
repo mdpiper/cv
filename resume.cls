@@ -122,7 +122,7 @@
       \textbf{email} \@email\hspace{1em}
       \textbf{tel} \@phone\hspace{1em}
       \textbf{web} \@webpage\hspace{1em} \\
-      \ifthenelse{\equal{\@github}{}}{}{\noindent{\textbf{github} \@github}}
+      \ifthenelse{\equal{\@github}{}}{}{\noindent{\textbf{github} \@github\hspace{1em}}}
       \ifthenelse{\equal{\@orcid}{}}{}{\noindent{\textbf{orcid} \@orcid}}
     }
   \end{small}
