@@ -2,8 +2,8 @@
 
 Build with:
 
-    latexmk -pdf
+    make
 	
 Clean up with:
 
-    latexmk -C
+    make clean
