@@ -11,4 +11,3 @@ cv:
 
 clean:
 	latexmk -C
-	rm -f *.bbl
