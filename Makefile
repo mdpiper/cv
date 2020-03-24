@@ -9,5 +9,8 @@ all:
 cv:
 	latexmk -pdf ${cv}
 
+show:
+	open ${cv}.pdf -a Negative
+
 clean:
 	latexmk -C
