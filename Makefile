@@ -13,4 +13,9 @@ show:
 	open ${cv}.pdf -a Negative
 
 clean:
+	latexmk -c
+
+cleaner:
 	latexmk -C
+
+.PHONY: clean cleaner
