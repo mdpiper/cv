@@ -10,7 +10,7 @@ cv:
 	latexmk -pdf ${cv}
 
 show:
-	open ${cv}.pdf -a Negative
+	open ${cv}.pdf
 
 clean:
 	latexmk -c
