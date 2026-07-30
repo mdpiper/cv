@@ -3,14 +3,13 @@
 cv = mpiper-cv
 
 
-all:
-	latexmk -pdf
+all: cv
 
 cv:
 	latexmk -pdf ${cv}
 
 show:
-	open ${cv}.pdf
+	latexmk -pv -pdf ${cv}.pdf
 
 clean:
 	latexmk -c
